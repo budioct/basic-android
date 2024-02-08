@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tutorial">
+    <!-- dalam project android sangat wajib kita miliki Manifest file, sebagai konfigurasi untuk aplikasi kita yang di baca oleh aplikasi android nya -->
+    <!-- tag manifest ada package yang di tentukan dari app kita sesuai dengan package code kita di directory /scr/main/java/package-->
 
     <application
         android:allowBackup="true"

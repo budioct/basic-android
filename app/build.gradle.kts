@@ -9,7 +9,7 @@ android {
     compileSdk = 34 // ketika di compile menggunakan level api android 34, tapi ketika di jalankan menggunakan defaultConfig{minSdk = 25}
 
     defaultConfig {
-        applicationId = "com.tutorial"
+        applicationId = "com.tutorial" // nama package uniq, contoh: namaPerusahan.namaProject
         minSdk = 25 // ini lah level api yang akan kita jalankan
         targetSdk = 34
         versionCode = 1

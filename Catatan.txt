@@ -62,3 +62,75 @@ Android Virtual Device
 ● Dan untungnya Android SDK mendukung kita untuk membuat Virtual Device, sehingga akan
    memudahkan kita menjalankan sistem operasi Android secara virtual
 
+
+Android Build System
+● Android build system akan melakukan kompilasi aplikasi dari kode program dan resource dan
+   mem-package semuanya menjadi sebuah aplikasi Android
+● Android Studio menggunakan Gradle, untuk melakukan otomatisasi semua proses tersebut,
+   sehingga kita tidak perlu melakukannya secara manual lagi menggunakan Android Build System
+● Gradle dan Android Build System sendiri sebenarnya bisa berjalan secara independen, oleh karena
+   itu kita wajib menggunakan Android Studio, namun dengan menggunakan Android Studio, akan mempermudah kita ketika membuat aplikasi Android
+
+
+Konfigurasi Modul Aplikasi
+● Setiap module di project, terdapat gradle file build.gradle yang berisikan konfigurasi dari module aplikasi
+● Kita perlu menentukan konfigurasi pada modul aplikasi sesuai dengan build configuration yang kita
+   gunakan, misal kita harus pastikan sdk dan target sdk nya sesuai dengan yang kita gunakan misalnya
+● Selain kita juga perlu menentukan applicationId, yang mana itu adalah id dari aplikasi kita, dan
+   harus unik secara global, artinya tidak boleh ada yang sama
+
+
+Android Application Package
+● Sebelum menjalankan aplikasi kita, kita perlu mem-package aplikasi Android kita dalam format
+   APK (Android Application Package)
+● Namun hal ini tidak perlu kita lakukan manual, karena secara otomatis Android Studio akan
+   menggunakan Gradle untuk membuat APK secara otomatis, lalu mengirimnya ke Device Android
+   yang kita pilih (Virtual Device atau Device Asli)
+
+
+
+App Component (Komponen Aplikasi)
+Aplikasi Android pada dasarnya terdiri dari lima jenis komponen berbeda:
+
+    Activity (Aktivitas)
+    Activity di Android adalah komponen penting yang mewakili satu layar dengan antarmuka pengguna. Ini seperti jendela di aplikasi desktop.
+    Aplikasi Android biasanya terdiri dari satu atau lebih aktivitas, masing-masing memiliki antarmuka yang memungkinkan interaksi pengguna.
+    Saat aplikasi diluncurkan, sebuah instance Activitydibuat, memulai siklus hidup aplikasi tersebut. Setiap aktivitas memiliki siklus hidupnya sendiri (buat, mulai,
+    lanjutkan, jeda, hentikan, hancurkan) yang menjaga status kemajuan pengguna, dan Android mengelola status ini secara otomatis. Aktivitas juga bisa memiliki Intent,
+    yang memungkinkannya berinteraksi dengan komponen lain, seperti memulai aktivitas lain atau mendapatkan hasil dari aktivitas tersebut.
+
+    Services (Layanan)
+    Layanan : Layanan di Android adalah komponen aplikasi yang melakukan operasi di latar belakang tanpa antarmuka pengguna. Ini bisa dimulai oleh komponen aplikasi,
+    seperti aktivitas, dan akan terus berjalan di latar belakang meskipun pengguna beralih ke aplikasi lain. Ada dua jenis layanan di Android, yaitu,
+    Started Servicedan Bound Service. A Started Servicedigunakan untuk melakukan satu operasi, seperti mengunduh file besar. Di sisi lain,
+    a Bound Servicemenawarkan antarmuka klien-server yang memungkinkan komponen berinteraksi dengan layanan, mengirim permintaan, menerima hasil,
+    dan bahkan melakukan komunikasi antarproses (IPC).
+
+    Content Provider (Penyedia konten)
+    Penyedia Konten di Android adalah komponen kunci yang memungkinkan aplikasi berbagi data dengan aplikasi lain secara aman.
+    Mereka bertindak sebagai lapisan antara database dan aplikasi untuk meningkatkan keamanan data. Penyedia konten mengelola akses ke kumpulan data
+    terstruktur dengan menangani transaksi data, menerapkan keamanan data, dan menjaga isolasi antar aplikasi. Mereka menyediakan antarmuka abstrak yang
+    digunakan untuk mengakses data, sementara metode penyimpanan yang mendasarinya (Seperti database SQLite, web, atau metode lainnya) tetap tersembunyi.
+    Mekanisme ini membantu mengambil data dari sumber non-relasional dengan cara yang terstruktur. Mereka digunakan terutama ketika data perlu dibagikan antar beberapa aplikasi,
+    tidak hanya dalam satu aplikasi.
+
+    Broadcast Receiver (Penerima siaran)
+    Penerima Siaran di Android adalah komponen yang merespons pengumuman siaran di seluruh sistem. Mereka dapat didaftarkan untuk merespons jenis siaran tertentu
+    atau menerapkan siaran yang ditentukan pengguna. Meskipun Anda dapat memulai siaran dari aplikasi Anda, siaran tersebut umumnya digunakan untuk
+    menerima pemberitahuan sistem atau berkomunikasi dengan aplikasi lain. Namun, perlu diingat bahwa mereka tidak dapat menampilkan antarmuka pengguna,
+    tetapi mereka dapat memulai aktivitas jika diperlukan, yang memang memiliki antarmuka pengguna. Sebuah BroadcastReceiverkelas harus mengganti onReceive()
+    metode di mana setiap pesan diterima sebagai Intentparameter objek.
+
+    Intent (Maksud)
+    ”Intent” di Android adalah mekanisme perangkat lunak yang digunakan untuk pengikatan waktu proses yang terlambat antar komponen, seperti aktivitas,
+    penyedia konten, dan layanan. Ini pada dasarnya adalah struktur data pasif yang menyimpan deskripsi abstrak dari operasi yang diminta untuk dilakukan
+    oleh sistem Android. Intent bisa bersifat eksplisit, di mana Anda menentukan komponen untuk memulai atau implisit, di mana Anda mendeklarasikan tindakan
+    umum yang akan dilakukan, sehingga memungkinkan komponen dari aplikasi lain untuk menanganinya. Maksud implisit sering kali digunakan untuk meminta fungsionalitas
+    aplikasi lain, seperti menunjukkan lokasi di peta kepada pengguna atau mengambil foto. “Filter Intent” kemudian digunakan oleh komponen untuk mengiklankan kemampuannya
+    dalam menangani berbagai jenis maksud.
+
+Manifest File
+● Setiap project Android, wajib memiliki Manifest File yaitu AndroidManifest.xml
+● Manifest File berisikan informasi dari aplikasi yang kita buat, seperti informasi Activity, Permission,
+   Intent, Content Provider, Broadcast Receiver, Service, dan lain-lain
+● https://developer.android.com/guide/topics/manifest/manifest-intro?hl=id
