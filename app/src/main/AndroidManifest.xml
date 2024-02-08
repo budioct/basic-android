@@ -15,6 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarAndroidDasar"
         tools:targetApi="31">
+
+        <!-- activity -->
+        <!-- android:name nama classnya -->
+        <!-- jadi kita tidak harus menulis secara ekplisit hanya titik.namaClass karna kita telah menambah packagenya di tag <manifest> ==> .MainActivity -->
+
+        <!-- intent-filter ini untuk memberi tahu ini itu action nya adalah MAIN= jadi angapanya ini adalah main function nyaa yang nantinya .MainActivity yang akan di jalankan-->
+        <!-- LAUNCHER= jadi activity running ini akan di buka / luncurkan -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
