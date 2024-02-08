@@ -1,0 +1,64 @@
+Android SDK
+● Saat kita membuat aplikasi Android menggunakan Android Studio, maka kita membutuhkan
+   Android SDK (Software Development Kit)
+● Android SDK akan terinstall secara otomatis ketika pertama kali kita membuat project, namun
+   kadang kita ingin menambah fitur atau melakukan update terhadap Android SDK yang kita install
+● Kita bisa menggunakan Android Studio untuk melakukan management Android SDK
+
+
+Android Compatibility
+● Karena Android adalah sistem operasi yang Open Source, maka banyak sekali vendor yang
+   membuat device yang menggunakan sistem operasi Android
+● Dari mulai smartphone, tablet, smart tv sampai dashboard untuk mobil
+● Oleh karena itu, kita perlu berhati-hati untuk memastikan kode program kita bisa berjalan di device yang berbeda
+● Salah satu yang paling penting adalah, memilih Android API Level yang ingin kita gunakan
+● Saat kita membuat aplikasi Android, kita perlu menentukan API Level minimal yang akan kita
+   gunakan, hal ini dilakukan untuk memastikan aplikasi kita bisa berjalan dengan baik pada sistem operasi Android yang menggunakan API Level tersebut
+
+
+Menentukan API Level
+● Semakin tinggi API Level yang kita pilih, semakin banyak fitur yang bisa digunakan, tapi semakin
+   sedikit juga device yang sudah menggunakan API Level tersebut
+● Oleh karena itu, kita perlu hati-hati menentukan API Level minimal yang akan kita gunakan untuk membuat aplikasi Android
+● Salah satu yang paling mudah, kita bisa melihat statistic pengguna device Android berdasarkan API Level nya
+
+
+Android Release Note
+● Untuk melihat daftar fitur apa saja yang terdapat di versi Android tertentu, kita bisa melihat
+   detailnya di release note Android nya
+● https://developer.android.com/about/versions?hl=id
+
+
+Membuat Project
+● Buat project baru menggunakan Empty Activity
+
+
+Struktur project android studio
+
+secara default setelah project di buat bisa multi module gradle dependency
+
+folder /app = adalah project dari android nya
+        -> /libs = adalah folder dimana nanti butuh library yang tidak menggunakan gradle dependecy management. cukup copy paste library nya di folder libs, (tidak di rekomendasikan)
+        -> /src = adalah tempat menyimpan kode android nya
+            -> /androidTest = tempat test yang membutuhkan di jalankan aplikasi di android (integration test)
+            -> /main = menyimpan kode utama kita, kode kotlin dan juga java
+                -> /java = tempat kode backend
+                -> /res = tempat resource yang bukan kode.. yaitu gambar, file, music
+            -> /test = unit testing (Junit5), test layer layer yang ada di backand project android
+
+
+Gradle struktur project nya
+file /project/build.gradle.kts = sebernya ini hanya parent project nya saja
+file /project/settings.gradle.kts = ini adalah file utama gradle nya.. karna dia ada kode -->  include : 'app'
+file /project/app/build.gradle.kts = di sinilah detail dari project android kita, ada plugin{}, android{}
+
+
+Android Virtual Device
+● Saat kita membuat aplikasi Android, kita tidak bisa menjalankan aplikasinya di sistem operasi
+   Windows, Mac atau Linux yang kita gunakan
+● Kita membutuhkan sistem operasi Android untuk menjalankan aplikasi Android kita
+● Ada dua cara menjalankan aplikasi Android kita, pertama menggunakan device Android kita, kedua
+   membuat Virtual Device
+● Dan untungnya Android SDK mendukung kita untuk membuat Virtual Device, sehingga akan
+   memudahkan kita menjalankan sistem operasi Android secara virtual
+
