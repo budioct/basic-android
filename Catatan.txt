@@ -222,3 +222,22 @@ Lateinit
 ● Salah satu rekomendasinya adalah kita simpan object komponen nya sebagai variable di class nya
 ● Namun karena pada kotlin jika kita ingin membuat variable yang bisa nullable harus menggunakan tanda ?, namun agar lebih mudah, kita bisa menggunakan lateinit,
    agar variable yang kita buat tidak perlu menjadi nullable
+
+
+Log
+● Saat kita membuat kode program Kotlin atau Java, kita sering melakukan println atau menulis tulisan ke console
+● Di Android, kita juga bisa melakukan hal tersebut dengan menggunakan class Log
+● Lebih tepatnya Log ini digunakan untuk melakukan logging di Android.. Log di Android adalah static class
+● https://developer.android.com/reference/android/util/Log
+
+Log Level
+● Berbeda dengan println biasanya, pada Log, terdapat yang namanya Level, yaitu level informasi yang ingin kita tampilkan
+● Android mendukung beberapa jenis Log Level
+
+Jenis Log Level (paling atas level rendah, paling bawah level tinggi )
+Log Level                Function
+VERBOSE                  Log.v(tag, message?, throwable?)
+DEBUG                    Log.d(tag, message?, throwable?) untuk pengecekan debubug
+INFO                     Log.i(tag, message?, throwable?) berupa info
+WARN                     Log.w(tag, message?, throwable?) berupa peringatan
+ERROR                    Log.e(tag, message?, throwable?) berupa error

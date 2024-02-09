@@ -2,6 +2,7 @@ package com.tutorial
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -47,6 +48,20 @@ class MainActivity : AppCompatActivity() {
         // Action Listener untuk proses interaksi layout component ke kode kotlin
         // jadi ketika text di isi value lalu tombol di klik, kemudian tampilkan: Hi name
         sayHelloButton.setOnClickListener {
+
+            // Log
+            Log.d("AOM", "This is debug log")
+            Log.i("AOM", "This is info log")
+            Log.w("AOM", "This is warinig log")
+            Log.e("AOM", "This is error log")
+            /**
+             * hasil dari Log, ketika layout di jalankan
+             * 2024-02-09 15:09:42.083 26535-26535 AOM                     com.tutorial                         D  This is debug log
+             * 2024-02-09 15:09:42.083 26535-26535 AOM                     com.tutorial                         I  This is info log
+             * 2024-02-09 15:09:42.083 26535-26535 AOM                     com.tutorial                         W  This is warinig log
+             * 2024-02-09 15:09:42.083 26535-26535 AOM                     com.tutorial                         E  This is error log
+             */
+
             val name =
                 nameEditText.text.toString() // text --> Editable getText() // akses text dari layout component lalu di conversi ke String, karna dari awal itu type nya Char
             sayHelloTextView.text = "Hi $name"
