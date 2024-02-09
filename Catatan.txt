@@ -175,3 +175,15 @@ Layout
 R Class
 ● Saat kita membuat Layout baru, secara otomatis Android akan melakukan auto generate sebuah variable berisikan id layout yang sesuai dengan nama Layout nya
 ● Dan untuk menentukan Layout mana yang akan ditampilkan di Activity, kita bisa menggunakan function setContentView(layout_id)
+
+
+View
+● Semua komponen UI di Android adalah turunan View
+● Ada banyak sekali komponen yang terdapat di Android, dan akan dibahas di kelas terpisah
+● Bahkan Layout sendiri adalah turunan dari class View
+● https://developer.android.com/reference/android/view/View
+
+Menambah View
+● Untuk menambah View, kita bisa menyebutkan View yang ingin kita gunakan di Layout yang sudah kita buat
+● Setiap komponen View memiliki banyak atribut yang bisa kita ubah, misal Button, Label dan Text
+   memiliki atribut text yang bisa kita ubah untuk mengubah tulisan text nya
