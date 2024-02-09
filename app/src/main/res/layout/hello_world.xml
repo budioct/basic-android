@@ -13,11 +13,12 @@
     <!-- menambah view (component)-->
     <!-- untuk setiap component kita beri Id supaya bisa berinteraksi dengan code kotlin -->
     <!-- tag TextView membuat label -->
+    <!-- cara mengakses String Resource di /res/values/string.xml, @string/sayHelloBotton  -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Nama:"/>
+        android:text="@string/nameEditText" />
 
     <!-- tag EditText membuat form input -->
     <EditText
@@ -32,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Say Hello"/>
+        android:text="@string/sayHelloBotton"/>
 
     <TextView
         android:id="@+id/sayHelloTextView"

@@ -1,3 +1,22 @@
 <resources>
+    <!-- String Resource -->
+    <!-- kita bisa juga membuat I18N di sini, ketimbang bikin banyak layout sesuai bahasa nantinya akan digunakan text UI Layout -->
+    <!-- ini adalah String Resource -->
+    <!-- kita tinggal tambahkan text <String> name="value" name bisa kita artikan sebagai id -->
     <string name="app_name">Belajar Android Dasar</string>
+    <string name="nameEditText">Name :</string>
+    <string name="sayHelloBotton">Say Hello :</string>
+
+    <!-- Formatting String -->
+    <!-- caranya cukup gunakan format %index$s untuk parameter string -->
+    <!-- %index$d untuk angka desimal -->
+    <string name="sayHelloTextView">Hello %1$s</string>
+
+    <!--  -->
+    <!-- String Array -->
+    <string-array name="names">
+        <item>Budhi</item>
+        <item>Oct</item>
+        <item>22</item>
+    </string-array>
 </resources>

@@ -284,3 +284,29 @@ Mengakses Resource
 ● Namun resource juga bisa dipanggil dari resource lainnya, pada kasus ini, kita bisa menggunakan id
    resource diawali dengan @ dan jenis resource, lalu diikuti dengan id resource, misal @string/id_string
 ● Contohnya pada layout, ketika kita membuat text di button, kita ingin mengisi text nya dari resource string misalnya
+
+
+Values Resource
+● Values resource merupakan jenis resource yang biasanya digunakan untuk menyimpan data-data
+   statis yang digunakan di kode program kita, misal string, integer, boolean, color dan lain-lain
+
+String Resource
+● String merupakan resource yang berisi teks
+● Rekomendasinya ketika kita membuat tulisan untuk kita tampilkan di halaman UI aplikasi Android
+   kita, disarankan jangan meng-hardcode pada kode program, lebih baik menggunakan String resource
+● Hal ini karena jika kita ingin mengubah text nya, tidak perlu mengubah kode program, selain itu
+   data text nya bisa digunakan ulang di halaman UI berbeda
+
+Formatting String
+● Kadang saat menggunakan String resource, kita butuh membuat String yang datanya dinamis dan
+   memiliki parameter, contoh pada kasus kita adalah tulisan Hello $name
+● Artinya $name tersebut bisa berubah-ubah
+● Untung nya String resource mendukung hal tersebut, kita bisa menggunakan formatting string
+   pada string resource, caranya cukup gunakan format %index$s untuk parameter string, atau %index$d untuk angka desimal
+
+String Array Resource
+● Values resource juga bisa kita tambahkan tipe resource berupa String Array
+● Kita bisa menggunakan tag <string-array> untuk menambahkan tipe String Array Resource
+● Dan di dalamnya untuk menambahkan tiap datanya, kita bisa gunakan tag <item>
+● String Array Resource secara otomatis akan terdapat di property array di class R
+● Untuk mengambil String Array Resource, kita bisa gunakan function getStringArray(resourceId)

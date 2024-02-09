@@ -67,9 +67,21 @@ class MainActivity : AppCompatActivity() {
              * 2024-02-09 15:09:42.083 26535-26535 AOM                     com.tutorial                         E  This is error log
              */
 
-            val name =
-                nameEditText.text.toString() // text --> Editable getText() // akses text dari layout component lalu di conversi ke String, karna dari awal itu type nya Char
-            sayHelloTextView.text = "Hi $name"
+            val name = nameEditText.text.toString() // text --> Editable getText() // akses text dari layout component lalu di conversi ke String, karna dari awal itu type nya Char
+            // sayHelloTextView.text = "Hi $name" // hard code
+            sayHelloTextView.text = resources.getString(R.string.sayHelloTextView, name) // hasil serupa dengan line 71, tetapi tidak hard code karna melalui String Resource
+
+            // getStringArray() untuk mengakses String Resource yang array, untuk mengaskes nya dengan class= R.array.name
+            resources.getStringArray(R.array.names).forEach {
+                Log.i("<string-array>", it)
+                /**
+                 * hasl dari log, ketika layout di jalankan
+                 * 2024-02-09 21:55:49.468 31351-31351 <string-array>          com.tutorial                         I  Budhi
+                 * 2024-02-09 21:55:49.468 31351-31351 <string-array>          com.tutorial                         I  Oct
+                 * 2024-02-09 21:55:49.468 31351-31351 <string-array>          com.tutorial                         I  22
+                 */
+            }
+
         }
 
     }
