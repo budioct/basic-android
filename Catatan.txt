@@ -241,3 +241,46 @@ DEBUG                    Log.d(tag, message?, throwable?) untuk pengecekan debub
 INFO                     Log.i(tag, message?, throwable?) berupa info
 WARN                     Log.w(tag, message?, throwable?) berupa peringatan
 ERROR                    Log.e(tag, message?, throwable?) berupa error
+
+
+Resource
+● Resource adalah file tambahan atau konten statis yang biasanya digunakan di kode program kita
+● Seperti contohnya text, gambar, layout, animasi, dan lain-lain
+● Android sendiri mendukung banyak sekali resource, kita akan bahas secara bertahap
+● Pertanyaannya, bagaimana untuk mengambil data resource nya?
+● Untuk mengambil data resource nya, kita bisa menggunakan class Resources
+● https://developer.android.com/reference/android/content/res/Resources
+
+Jenis-Jenis Resource (1)
+Resource Directory          Keterangan
+animator                    XML file definisi property animations
+anim                        XML file definisi tween animations
+color                       XML file definisi warna
+drawable                    Bitmap files (png, jpg, gif) atau XML file drawable resource
+mipmap                      Drawable file untuk icon launcher
+
+Jenis-Jenis Resource (2)
+Resource Directory          Keterangan
+layout                      XML file definisi layout user interface
+menu                        XML file definisi app menu
+raw                         File yang utuh lainnya
+values                      XML file yang berisi value seperti string, integer dan lain-lain
+xml                         XML file yang bisa dibaca menggunakan Resources.getXML()
+font                        Font files
+
+Pembahasan Resources
+● Pada kelas ini, kita tidak akan membahas semua Resources yang ada di Android, karena tiap jenis resource perlu topik masing-masing
+● Contohnya seperti animator atau anim, kita perlu mengenal penggunaan graphics terlebih dahulu di Android, sebelum menggunakan resource tersebut
+● Pada kelas ini, kita akan fokus membahas jenis resource dasar yang memang bisa langsung digunakan seperti values atau layout
+
+Resources di Activity
+● Class Resources secara otomatis akan dibuatkan di dalam Android Context, dimana Activity adalah turunan dari Android Context
+● Untuk mendapatkan object Resources, kita bisa langsung menggunakan function getResources(),
+   atau jika menggunakan Kotlin, kita bisa langsung panggil property resources
+
+Mengakses Resource
+● Setiap kita membuat Resource, secara otomatis resource tersebut akan memiliki id yang secara otomatis ditambahkan ke class R
+● Dengan demikian, untuk mengakses resource id nya di kode program kita, kita bisa langsung menggunakan class R
+● Namun resource juga bisa dipanggil dari resource lainnya, pada kasus ini, kita bisa menggunakan id
+   resource diawali dengan @ dan jenis resource, lalu diikuti dengan id resource, misal @string/id_string
+● Contohnya pada layout, ketika kita membuat text di button, kita ingin mengisi text nya dari resource string misalnya

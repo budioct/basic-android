@@ -43,7 +43,12 @@ class MainActivity : AppCompatActivity() {
         // penganti findViewById() yang redudance
         initComponents()
 
-        sayHelloTextView.text = "Hi" // text // mengakses attribute layout component
+        //sayHelloTextView.text = "Hi" // text // mengakses attribute layout component
+
+        // kita akan get resources
+        // Resources getResources() yang digunakan java mengakses resource, di kotlin attribute 'resources'
+        // getString() // untuk get class R , string adalah tag yang ada di folder /res/values/strings.xml <resources> <string> </string> </resources>
+        sayHelloTextView.text = resources.getString(R.string.app_name)
 
         // Action Listener untuk proses interaksi layout component ke kode kotlin
         // jadi ketika text di isi value lalu tombol di klik, kemudian tampilkan: Hi name
