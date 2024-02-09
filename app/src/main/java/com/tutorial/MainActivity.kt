@@ -22,11 +22,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.hello_world) // setContentView() // menampilkan view UI layout
 
         // cara mendapatkan View Id dari layout component ---> R.id.sayHelloTextView
-        val findViewById: EditText  = findViewById(R.id.nameEditText) // findViewById() // mendapatkan object dari komponen
-        val findViewById1: Button = findViewById(R.id.sayHelloButton)
+        val nameEditText: EditText  = findViewById(R.id.nameEditText) // findViewById() // mendapatkan object dari komponen
+        val sayHelloButton: Button = findViewById(R.id.sayHelloButton)
         val sayHelloTextView: TextView = findViewById(R.id.sayHelloTextView)
 
-        sayHelloTextView.text = "Hi"
+        sayHelloTextView.text = "Hi" // text // mengakses attribute layout component
+
+        // Action Listener untuk proses interaksi layout component ke kode kotlin
+        // jadi ketika text di isi value lalu tombol di klik, kemudian tampilkan: Hi name
+        sayHelloButton.setOnClickListener {
+            val name = nameEditText.text.toString() // text --> Editable getText() // akses text dari layout component lalu di conversi ke String, karna dari awal itu type nya Char
+            sayHelloTextView.text = "Hi $name"
+        }
 
     }
 }

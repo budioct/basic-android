@@ -201,3 +201,11 @@ View ID
 ● Android Build System akan secara otomatis membuatkan id tersebut sebagai id component di class R, mirip seperti pada Layout
 ● Best Practice penamaan view ID adalah nama diikuti dengan jenis komponen, misal : nameEditText,
    sayHelloButton, firstNameEditText, lastNameEditText, registerButton, dan lain-lain
+
+
+Action Listener
+● Beberapa jenis component memiliki Action Listener
+● Yaitu object yang bisa kita tambahkan ke komponen ketika sebuah aksi dilakukan ke komponen tersebut
+● Detail dari Action Listener akan kita bahas di kelas khusus membahas Android View
+● Contoh sederhana, pada Button, terdapat Click Listener yang bisa digunakan untuk menambahkan object Listener ketika tombol
+   di Click menggunakan function setOnClickListener(listener)
