@@ -10,7 +10,8 @@
     <!-- tag LinearLayout adalah layout yang di sediakan Android -->
     <!-- LinearLayout cara kerja nya di tumpuk dari atas ke bawah -->
 
-    <!-- menambah view -->
+    <!-- menambah view (component)-->
+    <!-- untuk setiap component kita beri Id supaya bisa berinteraksi dengan code kotlin -->
     <!-- tag TextView membuat label -->
     <TextView
         android:layout_width="wrap_content"
@@ -20,18 +21,21 @@
 
     <!-- tag EditText membuat form input -->
     <EditText
+        android:id="@+id/nameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"/>
 
     <!-- tag Button membuat tombol -->
     <Button
+        android:id="@+id/sayHelloButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Say Hello"/>
 
     <TextView
+        android:id="@+id/sayHelloTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"/>

@@ -2,6 +2,9 @@ package com.tutorial
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,5 +20,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState) // onCreate // Salah satu method yang dipanggil ketika Activity dibuat
         setContentView(R.layout.hello_world) // setContentView() // menampilkan view UI layout
+
+        // cara mendapatkan View Id dari layout component ---> R.id.sayHelloTextView
+        val findViewById: EditText  = findViewById(R.id.nameEditText) // findViewById() // mendapatkan object dari komponen
+        val findViewById1: Button = findViewById(R.id.sayHelloButton)
+        val sayHelloTextView: TextView = findViewById(R.id.sayHelloTextView)
+
+        sayHelloTextView.text = "Hi"
+
     }
 }

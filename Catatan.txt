@@ -187,3 +187,17 @@ Menambah View
 ● Untuk menambah View, kita bisa menyebutkan View yang ingin kita gunakan di Layout yang sudah kita buat
 ● Setiap komponen View memiliki banyak atribut yang bisa kita ubah, misal Button, Label dan Text
    memiliki atribut text yang bisa kita ubah untuk mengubah tulisan text nya
+
+View ID
+Find View by Id
+● Saat kita menambahkan komponen ke Layout, kadang kita ingin mendapatkan object dari komponen tersebut
+● Caranya adalah kita bisa menggunakan function findViewById()
+● Namun sebelum kita bisa menggunakan function tersebut, kita perlu menambahkan id terhadap
+   komponen yang ingin kita ambil objectnya
+
+View ID
+● Untuk menambahkan View ID, kita bisa menambahkan atribut id pada komponen nya
+● Namun caranya kita perlu menggunakan nilai @+id/namaIdNya
+● Android Build System akan secara otomatis membuatkan id tersebut sebagai id component di class R, mirip seperti pada Layout
+● Best Practice penamaan view ID adalah nama diikuti dengan jenis komponen, misal : nameEditText,
+   sayHelloButton, firstNameEditText, lastNameEditText, registerButton, dan lain-lain
