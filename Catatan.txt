@@ -209,3 +209,16 @@ Action Listener
 ● Detail dari Action Listener akan kita bahas di kelas khusus membahas Android View
 ● Contoh sederhana, pada Button, terdapat Click Listener yang bisa digunakan untuk menambahkan object Listener ketika tombol
    di Click menggunakan function setOnClickListener(listener)
+
+
+Lateinit
+Masalah Dengan Find View By Id
+● Saat kita menggunakan function findViewById(), maka aplikasi kita akan secara otomatis mencari View berdasarkan id kita
+● Saat komponen dan layout kita masih sedikit, maka menggunakan findViewById() secara terus menerus tidak akan bermasalah, namun saat nanti
+   komponen dan layout kita semakin banyak, maka akan membuat kode program kita semakin lambat
+● Oleh karena itu tidak disarankan selalu memanggil function ini setiap kali kita butuh komponent
+
+Lateinit
+● Salah satu rekomendasinya adalah kita simpan object komponen nya sebagai variable di class nya
+● Namun karena pada kotlin jika kita ingin membuat variable yang bisa nullable harus menggunakan tanda ?, namun agar lebih mudah, kita bisa menggunakan lateinit,
+   agar variable yang kita buat tidak perlu menjadi nullable
