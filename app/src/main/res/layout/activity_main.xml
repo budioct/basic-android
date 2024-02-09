@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--  -->
+    <!-- ini adalah tampilan layout android nya -->
+    <!-- file ini akan di generate otomatis menjadi class R.layout.nama_activity_layout.xml -->
+    <!-- class R.layout akan di akses oleh MainActivity.kt -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

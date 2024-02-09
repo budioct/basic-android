@@ -13,8 +13,9 @@ class MainActivity : AppCompatActivity() {
 
     // activity callback, function onCreate() dipanggil ketika activity dibuat
     // (callback function) ketika activity di buat method ini yang akan di eksekusi
+    // class R.layout.namaLayoutActivity.xml adalah class yang di generate android untuk di akses method main.kt
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState) // onCreate // Salah satu method yang dipanggil ketika Activity dibuat
-        setContentView(R.layout.activity_main) // setContentView() // menampilkan view UI layout
+        setContentView(R.layout.hello_world) // setContentView() // menampilkan view UI layout
     }
 }

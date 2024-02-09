@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--  -->
+    <!-- untuk membuat layout biasakan nama file tidak boleh ada space, karna akan susah untuk class R.layout mengaksesnya di class main.kt -->
+    <!-- tag LinearLayout adalah layout yang di sediakan Android -->
+    <!-- LinearLayout cara kerja nya di tumpuk dari atas ke bawah -->
+
+</LinearLayout>
