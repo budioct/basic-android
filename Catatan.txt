@@ -1,4 +1,4 @@
-Android SDK
+Android SDK (Software Development Kit)
 ● Saat kita membuat aplikasi Android menggunakan Android Studio, maka kita membutuhkan
    Android SDK (Software Development Kit)
 ● Android SDK akan terinstall secara otomatis ketika pertama kali kita membuat project, namun
@@ -71,6 +71,9 @@ Android Build System
 ● Gradle dan Android Build System sendiri sebenarnya bisa berjalan secara independen, oleh karena
    itu kita wajib menggunakan Android Studio, namun dengan menggunakan Android Studio, akan mempermudah kita ketika membuat aplikasi Android
 
+Proses Build
+● Compiler akan melakukan kompilasi semua kode kita menjadi DEX (Dalvix Executable) file
+● API Packager akan menandai file apakah ini versi debug atau release, sebelum akhirnya dijadikan aplikasi file APK (Android Application Package)
 
 Konfigurasi Modul Aplikasi
 ● Setiap module di project, terdapat gradle file build.gradle yang berisikan konfigurasi dari module aplikasi
