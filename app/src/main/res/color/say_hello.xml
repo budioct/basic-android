@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Color State List Resource -->
+    <!-- dimana kita membuat color dengan state -->
+    <!-- android:color="hexadecimal" android:state_yang_mau_digunakan="boolean" -->
+    <!-- kita juga bisa ambil color dari Value Resource lainya dengan @color/idColorDariTag ===> @color/background -->
+
+    <item android:color="#FFFF00" android:state_pressed="true"/>
+    <item android:color="#FFFFFF" android:state_focused="true"/>
+    <item android:color="@color/background" />
+
+</selector>

@@ -325,3 +325,11 @@ Layout Resource
 ● Layout juga bisa menambahkan layout lain, dengan menggunakan tag <include>
 ● Setiap layout harus memiliki satu root element, jika misal kita tidak ingin memiliki root element,
    misal untuk digunakan sebagai include di layout lain, kita bisa gunakan root tag <merge>
+
+Color State List Resource
+● Color State List Resource merupakan object yang bisa kita buat dalam XML yang merupakan
+   representasi Color (Warna), tapi tidak satu Color, melainkan bisa beberapa Color tergantung state dari View nya
+● Color State List Resource di representasikan dalam class ColorStateList
+   https://developer.android.com/reference/android/content/res/ColorStateList
+● Color State List Resource juga bisa menggunakan Color Resource yang sudah kita buat di Values Resource dengan menggunakan @color/namaResource
+● https://developer.android.com/guide/topics/resources/color-list-resource?hl=id
