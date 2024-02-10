@@ -55,10 +55,10 @@ class MainActivity : AppCompatActivity() {
         sayHelloButton.setOnClickListener {
 
             // Log
-            Log.d("AOM", "This is debug log")
-            Log.i("AOM", "This is info log")
-            Log.w("AOM", "This is warinig log")
-            Log.e("AOM", "This is error log")
+            Log.d("Logger", "This is debug log")
+            Log.i("Logger", "This is info log")
+            Log.w("Logger", "This is warinig log")
+            Log.e("Logger", "This is error log")
             /**
              * hasil dari Log, ketika layout di jalankan
              * 2024-02-09 15:09:42.083 26535-26535 AOM                     com.tutorial                         D  This is debug log
@@ -66,6 +66,16 @@ class MainActivity : AppCompatActivity() {
              * 2024-02-09 15:09:42.083 26535-26535 AOM                     com.tutorial                         W  This is warinig log
              * 2024-02-09 15:09:42.083 26535-26535 AOM                     com.tutorial                         E  This is error log
              */
+
+            // Log Other Resource, folder /res/values/other.xml
+            // Resources getResources() yang digunakan java mengakses resource, di kotlin attribute 'resources'
+            Log.i("Value Resource", resources.getBoolean(R.bool.isProductionMode).toString()) // getBoolean() get Class R.type.id  element di layout
+            Log.i("Value Resource", resources.getInteger(R.integer.maxPage).toString()) // getInteger() get Class R.type.id  element di layout
+            Log.i("Value Resource", resources.getIntArray(R.array.numbers).joinToString(", ")) // getIntArray get Class R.type.id  element di layout
+            Log.i("Value Resource", resources.getColor(R.color.background, theme).toString()) // getColor() get Class R.type.id  element di layout
+
+            // merubah latar background, dari value resource, tidak hardcode
+            sayHelloButton.setBackgroundColor(resources.getColor(R.color.background, theme)) // setBackgroundColor() // merubah background button di component layout UI
 
             val name = nameEditText.text.toString() // text --> Editable getText() // akses text dari layout component lalu di conversi ke String, karna dari awal itu type nya Char
             // sayHelloTextView.text = "Hi $name" // hard code

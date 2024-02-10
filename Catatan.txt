@@ -310,3 +310,9 @@ String Array Resource
 ● Dan di dalamnya untuk menambahkan tiap datanya, kita bisa gunakan tag <item>
 ● String Array Resource secara otomatis akan terdapat di property array di class R
 ● Untuk mengambil String Array Resource, kita bisa gunakan function getStringArray(resourceId)
+
+Value Resource Lainnya
+● Selain String Resource dan String Array Resource, di dalam Value Resource, kita bisa
+   menambahkan banyak jenis Resource Lainnya
+● Misalnya Integer, Integer Array, Boolean, Color dan lain-lain
+● https://developer.android.com/guide/topics/resources/more-resources?hl=id
