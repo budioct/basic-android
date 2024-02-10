@@ -379,3 +379,27 @@ Raw Resource (Penting di pahami)
 ● Android juga sebenarnya mendukung Raw Resource, memang tidak se flexible AssetManager, namun pada kasus yang tidak terlalu banyak assetnya,
    kita bisa gunakan Raw Resource
 ● Raw Resource akan secara otomatis men-generate id di class R, sehingga kesalahan tidak akan mungkin terjadi ketika aplikasinya sudah berjalan
+
+Context (penting di pahami)
+● Dalam Android, terdapat object bernama Context. Context berisi global informasi tentang
+   environment aplikasi. Context merupakan Abstract Class yang implementasinya sudah dilakukan oleh Android.
+● Context memungkinkan kita mengakses resource, membuka activity, menerima intent, broadcasting, dan lain-lain
+● https://developer.android.com/reference/android/content/Context
+
+Jenis Context
+● Di Android, terdapat 2 jenis Context, Application Context dan Activity Context
+● Application Context merupakan context yang tersedia di aplikasi Android. Dan hanya dibuat sekali, alias singleton
+● Application Context bisa diakses dengan function getApplicationContext()
+● Activity Context merupakan context tersedia di Activity. Misal jika kita punya MainActivity, maka akan ada Activity Context untuk MainActivity itu
+● Activity Context bisa diakses langsung dengan Activity nya, karena Activity adalah turunan dari Context
+
+Kapan Menggunakan Context
+● Application Context digunakan jika kita ingin membuat object yang singleton yang membutuhkan Context
+● Activity Context digunakan jika kita ingin membuat object yang hanya digunakan di Activity tersebut
+● Jangan menggunakan Activity Context untuk object yang singleton, karena nanti otomatis
+   referensi ke Activity tersebut akan selalu ada, dan otomatis object Activity tidak bisa dihapus di
+   memory Android, hal ini bisa menyebabkan memory leak
+
+Note: jangan buat Activity Context untuk object yang singletone!!
+    Application Context: Singleton cukup bikin 1 kali di project contoh 1 layar satu activity
+    Activity Context: hanya digunakan object yang di buat sekarang/tersebut
