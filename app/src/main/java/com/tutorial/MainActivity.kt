@@ -73,6 +73,13 @@ class MainActivity : AppCompatActivity() {
             Log.i("Value Resource", resources.getInteger(R.integer.maxPage).toString()) // getInteger() get Class R.type.id  element di layout
             Log.i("Value Resource", resources.getIntArray(R.array.numbers).joinToString(", ")) // getIntArray get Class R.type.id  element di layout
             Log.i("Value Resource", resources.getColor(R.color.background, theme).toString()) // getColor() get Class R.type.id  element di layout
+            /**
+             * result: get value resource
+             * 2024-02-10 09:05:10.608  3788-3788  Value Resource          com.tutorial                         I  true
+             * 2024-02-10 09:05:10.608  3788-3788  Value Resource          com.tutorial                         I  100
+             * 2024-02-10 09:05:10.608  3788-3788  Value Resource          com.tutorial                         I  100, 200, 300
+             * 2024-02-10 09:05:10.609  3788-3788  Value Resource          com.tutorial                         I  -65536
+             */
 
             // merubah latar background, dari value resource, tidak hardcode
             sayHelloButton.setBackgroundColor(resources.getColor(R.color.background, theme)) // setBackgroundColor() // merubah background button di component layout UI

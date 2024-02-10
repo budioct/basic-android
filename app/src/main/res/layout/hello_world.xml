@@ -14,26 +14,32 @@
     <!-- untuk setiap component kita beri Id supaya bisa berinteraksi dengan code kotlin -->
     <!-- tag TextView membuat label -->
     <!-- cara mengakses String Resource di /res/values/string.xml, @string/sayHelloBotton  -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/nameEditText" />
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:text="@string/nameEditText" />-->
 
     <!-- tag EditText membuat form input -->
-    <EditText
-        android:id="@+id/nameEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
+<!--    <EditText-->
+<!--        android:id="@+id/nameEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"/>-->
 
     <!-- tag Button membuat tombol -->
-    <Button
-        android:id="@+id/sayHelloButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/sayHelloBotton"/>
+<!--    <Button-->
+<!--        android:id="@+id/sayHelloButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:text="@string/sayHelloBotton"/>-->
+
+    <!-- Layout Resource -->
+    <!-- mengabungkan dari pecahan layout layout -->
+    <!-- tag include untuk mengabungkan layout -->
+    <!-- key:layout, value:@layout/fileLayout  -->
+    <include layout="@layout/say_hello_form" />
 
     <TextView
         android:id="@+id/sayHelloTextView"
