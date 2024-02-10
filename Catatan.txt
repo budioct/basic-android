@@ -403,3 +403,12 @@ Kapan Menggunakan Context
 Note: jangan buat Activity Context untuk object yang singletone!!
     Application Context: Singleton cukup bikin 1 kali di project contoh 1 layar satu activity
     Activity Context: hanya digunakan object yang di buat sekarang/tersebut
+
+
+Application
+● Application adalah base class untuk maintain global application state
+● Secara default Android akan membuat object Application sendiri, namun kita juga bisa membuat
+   class Application sendiri, asal harus turunan dari class Application
+● Dan untuk mendaftarkan class Application yang kita buat, kita harus daftarkan di Manifest File dengan tag “android:name”
+● https://developer.android.com/reference/android/app/Application
+● Untuk mendapatkan object Application, kita bisa menggunakan function getApplication() di Activity

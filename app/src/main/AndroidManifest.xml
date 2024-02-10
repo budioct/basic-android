@@ -6,7 +6,9 @@
     <!-- tag manifest ada package yang di tentukan dari app kita sesuai dengan package code kita di directory /scr/main/java/package-->
 
     <!-- untuk mengakses resource dengan cara '@string/name' dia akan mengases file.xml yang ada di folder /res/.. -->
+    <!-- tag android:name=".MyApplication" untuk registerasikan class Activity_Application yang telah dibuat -->
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
