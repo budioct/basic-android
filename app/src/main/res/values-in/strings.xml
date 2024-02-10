@@ -1,0 +1,9 @@
+<resources>
+    <!-- String Resource akan aktif jika android switch ke Bahasa Indonesia -->
+    <!-- kita bisa juga membuat I18N di sini, ketimbang bikin banyak layout sesuai bahasa nantinya akan digunakan text UI Layout -->
+    <!-- kita tinggal tambahkan text <String> name="value" name bisa kita artikan sebagai id -->
+    <string name="app_name">Belajar Android Dasar</string>
+    <string name="nameEditText">nama </string>
+    <string name="sayHelloBotton">Ucapkan Halo</string>
+    <string name="sayHelloTextView">Halo %1$s</string>
+</resources>
