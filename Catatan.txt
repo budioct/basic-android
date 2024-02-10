@@ -361,3 +361,13 @@ Localization Resource
 ● Misal res/drawable-in/pzn.png untuk drawable resource bahasa Indonesia
 ● Saat kita membuat membuat resource alternatif, jika ternyata resource dengan id yang dimaksud
    tidak tersedia, maka secara otomatis akan menggunakan default resource
+
+Asset Manager (Java IO)
+● Kadang kita ingin menambahkan resource di Aplikasi Android kita, tapi bukan resource yang di manage oleh Android,
+   misal kita ingin menambahkan file JSON atau TXT misalnya
+● Untuk kasus seperti ini, kita bisa menggunakan AssetManager
+● AssetManager adalah class yang bisa kita gunakan untuk mengakses resource secara manual
+● https://developer.android.com/reference/android/content/res/AssetManager
+● AssetManager akan mengambil resource pada directory assets, sehingga kita perlu membuatnya terlebih dahulu
+● Dan untuk mendapatkan AssetManager, kita bisa gunakan function getAssets() di Context / Activity
+di maintance di folder main/assets

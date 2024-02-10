@@ -102,7 +102,25 @@ class MainActivity : AppCompatActivity() {
                  */
             }
 
+            // akses Assets (folder yang tidak di manage oleh android yaitu Resource).. kita tinggal masukan saja ke Assets
+            // AssetManager getAssets() atau assets untuk mengakses folder /../assets/
+            // InputStream open(@NonNull String fileName) atau open() // membaca file format apapun di dalam folder assets
+            // bufferedReader() // membaca setiap charater di file
+            // use() // konversi type ke String
+            val json = assets.open("sample.json")
+                .bufferedReader()
+                .use { it.readText() }
+            Log.i("Assets Manager", json)
+            /**
+             * result:
+             * 2024-02-10 11:40:13.363 11872-11872 Assets Manager          com.tutorial                         I  {
+             *                                                                                                       "firstname" : "budhi",
+             *                                                                                                       "lastname" : "oct"
+             *                                                                                                     }
+             */
+
         }
 
     }
+
 }
