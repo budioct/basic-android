@@ -371,3 +371,11 @@ Asset Manager (Java IO)
 ● AssetManager akan mengambil resource pada directory assets, sehingga kita perlu membuatnya terlebih dahulu
 ● Dan untuk mendapatkan AssetManager, kita bisa gunakan function getAssets() di Context / Activity
 di maintance di folder main/assets
+
+Raw Resource (Penting di pahami)
+● Salah satu masalah ketika menggunakan Asset Manager adalah, kita harus mengetikkan lokasi resource nya menggunakan string.
+   Hal ini akan rentan kesalahan, terutama jika lokasi file tidak ada maka otomatis aplikasi kita akan error.
+   Dan error ini tidak bisa dideteksi ketika kompilasi
+● Android juga sebenarnya mendukung Raw Resource, memang tidak se flexible AssetManager, namun pada kasus yang tidak terlalu banyak assetnya,
+   kita bisa gunakan Raw Resource
+● Raw Resource akan secara otomatis men-generate id di class R, sehingga kesalahan tidak akan mungkin terjadi ketika aplikasinya sudah berjalan

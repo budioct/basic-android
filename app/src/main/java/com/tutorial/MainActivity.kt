@@ -112,13 +112,31 @@ class MainActivity : AppCompatActivity() {
                 .use { it.readText() }
             Log.i("Assets Manager", json)
             /**
-             * result:
+             * result: ini dari folder main/assets/sample.json
              * 2024-02-10 11:40:13.363 11872-11872 Assets Manager          com.tutorial                         I  {
              *                                                                                                       "firstname" : "budhi",
              *                                                                                                       "lastname" : "oct"
              *                                                                                                     }
              */
 
+            // Raw Resource (lebih aman ketimbang AssetManager),, karna class R.raw.nameFile dan juga mendukung I18N/Localization
+            // InputStream openRawResource(@RawRes int id) atau openRawResource() // membaca file format apapun di dalam folder res/row/.
+            val sample = resources.openRawResource(R.raw.sample)
+                .bufferedReader()
+                .use { it.readText() }
+            Log.i("Row Resource", sample)
+            /**
+             * result: ini dari folder res/raw/sample.json
+             * 2024-02-10 11:59:15.552 12237-12237 Row Resource            com.tutorial                         I  {
+             *                                                                                                       "firstname" : "budhi",
+             *                                                                                                       "lastname" : "oct"
+             *                                                                                                     }
+             * mendukung I18N / localization.. ini dari folder res/raw-in/sample.json
+             * 2024-02-10 12:06:58.528 12429-12429 Row Resource            com.tutorial                         I  {
+             *                                                                                                       "namaDepan" : "budhi",
+             *                                                                                                       "namaBelakang" : "octaviansyah"
+             *                                                                                                     }
+             */
         }
 
     }
