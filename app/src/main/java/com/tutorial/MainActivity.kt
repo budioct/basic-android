@@ -81,6 +81,9 @@ class MainActivity : AppCompatActivity() {
              * 2024-02-10 09:05:10.609  3788-3788  Value Resource          com.tutorial                         I  -65536
              */
 
+            // akses drawable dari mainActivity
+            // resources.getDrawable(R.drawable.sb, theme) // getDrawable() akses class R.drawable.fileName
+
             // merubah latar background, dari value resource, tidak hardcode
             sayHelloButton.setBackgroundColor(resources.getColor(R.color.background, theme)) // setBackgroundColor() // merubah background button di component layout UI
 

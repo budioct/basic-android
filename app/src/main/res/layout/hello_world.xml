@@ -35,6 +35,14 @@
 <!--        android:layout_gravity="center_horizontal"-->
 <!--        android:text="@string/sayHelloBotton"/>-->
 
+    <!-- -->
+    <!-- tag ImageView include img,jpg,bitmap, dari drawable(resource semua gambar) -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/sb"/>
+
     <!-- Layout Resource -->
     <!-- mengabungkan dari pecahan layout layout -->
     <!-- tag include untuk mengabungkan layout -->

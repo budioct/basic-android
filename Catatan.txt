@@ -333,3 +333,10 @@ Color State List Resource
    https://developer.android.com/reference/android/content/res/ColorStateList
 ● Color State List Resource juga bisa menggunakan Color Resource yang sudah kita buat di Values Resource dengan menggunakan @color/namaResource
 ● https://developer.android.com/guide/topics/resources/color-list-resource?hl=id
+
+Drawable Resource
+● Drawable Resource adalah jenis resource dengan konsep graphics yang bisa digambar di layar
+● Ada banyak jenis Drawable, seperti Bitmap File (file gambar), Nine Patch File, Layer List, State List dan lain-lain
+● https://developer.android.com/guide/topics/resources/drawable-resource?hl=id
+● Drawable direpresentasikan dalam class Drawable, dan untuk mendapatkanya, kita bisa gunakan function getDrawable(resourceId) pada class Resources
+● https://developer.android.com/reference/android/graphics/drawable/Drawable
