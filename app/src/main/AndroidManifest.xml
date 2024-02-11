@@ -5,6 +5,10 @@
     <!-- dalam project android sangat wajib kita miliki Manifest file, sebagai konfigurasi untuk aplikasi kita yang di baca oleh aplikasi android nya -->
     <!-- tag manifest ada package yang di tentukan dari app kita sesuai dengan package code kita di directory /scr/main/java/package-->
 
+    <!-- menambahkan fitur dalam konfigurasi -->
+    <!-- Controlling Application Availability 'declarative', hal ini menyebabkan kondisi wajib jika fitur disimpan dalam konfigurasi-->
+    <uses-feature android:name="android.hardware.fingerprint" android:required="true" />
+
     <!-- untuk mengakses resource dengan cara '@string/name' dia akan mengases file.xml yang ada di folder /res/.. -->
     <!-- tag android:name=".MyApplication" untuk registerasikan class Activity_Application yang telah dibuat -->
     <application

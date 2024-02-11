@@ -1,5 +1,7 @@
 package com.tutorial
 
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -25,6 +27,25 @@ class MainActivity : AppCompatActivity() {
         nameEditText = findViewById(R.id.nameEditText) // findViewById() // mendapatkan object dari komponen
         sayHelloButton = findViewById(R.id.sayHelloButton)
         sayHelloTextView = findViewById(R.id.sayHelloTextView)
+    }
+
+//    pengecekan fitur dalam konfigurasi apakah perangkat ada perangkat atau tidak
+//    Controlling Application Availability 'Programmatic', cek di kode aplikasi kita, jadi pengecekan dilakukan saat aplikasi berjalan
+    private fun checkFingerprint(){
+
+        if (packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)){
+            Log.i("FEATURE", "Feature Fingerprint ON")
+        } else{
+            Log.i("FEATURE", "Feature Fingerprint OFF")
+        }
+    }
+
+    private fun checkPlatformVersion(){
+
+        Log.i("SDK", Build.VERSION.SDK_INT.toString())
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S){
+            Log.i("SDK", "Disabled feature, becaouse version sdk is lower than 31")
+        }
     }
 
     // activity callback, function onCreate() dipanggil ketika activity dibuat
@@ -137,6 +158,23 @@ class MainActivity : AppCompatActivity() {
              *                                                                                                       "namaBelakang" : "octaviansyah"
              *                                                                                                     }
              */
+
+            // cek perangkat apah punya feature ini yaitu FingerPrint
+            // Controlling Application Availability 'Programmatic', cek di kode aplikasi kita, jadi pengecekan dilakukan saat aplikasi berjalan
+            checkFingerprint()
+            /**
+             * result:
+             * 2024-02-11 13:47:06.983 13681-13681 FEATURE                 com.tutorial                         I  Feature Fingerprint ON
+             */
+
+            // cek perangkat minimun SDK Android, jika level android di bawah targer akan tampil logging, disable feature
+            checkPlatformVersion()
+            /**
+             * result:
+             * 2024-02-11 13:57:11.743 13894-13894 SDK                     com.tutorial                         I  25
+             * 2024-02-11 13:57:11.743 13894-13894 SDK                     com.tutorial                         I  Disabled feature, becaouse version sdk is lower than 31
+             */
+
         }
 
     }

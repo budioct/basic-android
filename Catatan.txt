@@ -412,3 +412,42 @@ Application
 ● Dan untuk mendaftarkan class Application yang kita buat, kita harus daftarkan di Manifest File dengan tag “android:name”
 ● https://developer.android.com/reference/android/app/Application
 ● Untuk mendapatkan object Application, kita bisa menggunakan function getApplication() di Activity
+
+
+Device Compatibility (wajib di pahami)
+● Android di desain untuk bisa berjalan pada berbagai perangkat, dari smartphone, tablet sampai tv
+● Banyaknya target perangkat yang bisa menjalankan Android menjadikan salah satu keuntungan,
+   sehingga aplikasi kita bisa ditargetkan untuk banyak jenis perangkat
+● Namun, agar aplikasi kita bisa berjalan dengan baik di berbagai jenis perangkat yang berbeda,
+   aplikasi kita harus memastikan bisa mentoleransi ketersediaan fitur pada perangkat keras, dan juga
+   UI yang harus flexible yang bisa beradaptasi dengan ukuran layar yang berbeda-beda
+
+Controlling Application Availability
+● Android mendukung banyak sekali fitur yang bisa digunakan oleh aplikasi kita melalui Android
+   Platform API. Beberapa fitur ada yang berbasis hardware (misal compass sensor dan fingerprint),
+   beberapa berbasis software (misal app widgets), dan beberapa tergantung versi platform
+● Tidak semua perangkat Android mendukung semua fitur, jadi kita harus mengontrol aplikasi kita
+   berdasarkan fitur yang terdapat pada perangkat nya.
+● Untuk mengontrol perangkat yang bisa menjalankan aplikasi kita, kita bisa menggunakan dua cara, secara declarative atau programmatic
+● Declarative artinya kita simpan pada konfigurasi aplikasi, hal ini menyebabkan kondisi wajib
+● Programmatic artinya kita cek di kode aplikasi kita, jadi pengecekan dilakukan saat aplikasi berjalan
+Note:
+
+Device Feature di Manifest File
+● Contoh jika kita mewajibkan sebuah fitur ada di device, dan jika tidak ada maka aplikasi kita tidak
+   bisa dijalankan, maka kita bisa tambahkan di manifest file
+● Contoh, jika aplikasi kita berbasis compass sensor, maka tidak berguna juga juga device nya tidak
+   memiliki fitur tersebut, sehingga kita bisa mewajibkan perangkat yang memiliki fitur compass sensor
+● Jika perangkat tidak memiliki fitur itu, secara otomatis dia tidak bisa menginstall aplikasi kita
+
+Device Feature di Kode
+● Namun jika misal fitur yang kita butuhkan hanya optional, misal contohnya fingerprint ada fitur
+   yang boleh ada boleh tidak, kita bisa cukup melakukan pengecekan di kode program kita saja
+● Kita bisa menggunakan class PackageManager untuk mengeceknya
+● https://developer.android.com/reference/android/content/pm/PackageManager
+● Dan untuk mendapatkan object PackageManager, kita bisa gunakan functtion getPackageManager()
+
+Platform Version
+● Saat kita membuat Android, kadang kita ingin mendukung versi dari platform yang minimal versi berapa
+● Dan setiap versi platform Android rilis, biasanya akan membawa fitur baru, sehingga kita perlu
+   tahu juga, fitur yang terdapat di Android tersebut ada sejak versi platform berapa
