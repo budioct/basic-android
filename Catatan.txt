@@ -451,3 +451,24 @@ Platform Version
 ● Saat kita membuat Android, kadang kita ingin mendukung versi dari platform yang minimal versi berapa
 ● Dan setiap versi platform Android rilis, biasanya akan membawa fitur baru, sehingga kita perlu
    tahu juga, fitur yang terdapat di Android tersebut ada sejak versi platform berapa
+
+Screen Compatibility (penting di pahami)
+● Android berjalan di perangkat dengan berbagai ukuran, dari smartphone, tablet sampai tv
+● Untuk mengkategorisasikan perangkat berdasarkan ukuran layar, Android mendefinisikan dalam
+   dua karakteristik, screen size (ukuran layar) dan screen density (kepadatan pixel layar, atau DPI)
+● Untuk mempermudah dan menggeneralisasi semua varian ini, Android membagi menjadi beberapa grup
+● Screen size : small, normal, large dan xlarge
+● Screen density : mdpi (medium), hdpi (high), xhdpi (extra high), xxhdpi (extra-extra high) dan others
+● Secara default, aplikasi kita akan kompatibel dengan semua screen size dan dencity, karena
+   Android akan melakukan penyesuaian layout UI dan gambar untuk tiap perangkat layar
+● Namun untuk pengalaman yang lebih baik, ada baiknya kita menggunakan resource yang sesuai dengan tiap jenis layar
+
+Pixel Densities
+● Saat kita akan mendukung perangkat yang kepadatan pixelnya berbeda-beda, maka agak
+   menyulitkan ketika kita ingin membuat komponent yang ukurannya fix, misal menggunakan pixel
+● Contoh jika kita menggunakan komponen dengan ukuran 100px , maka akan terlihat besar di layar
+   yang density nya kecil, tapi akan terlihat kecil jika diukuran layar yang density nya besar
+● Oleh karena itu, di Android, kita jarang menggunakan ukuran px, melainkan ukuran dp (density-independent pixels)
+● Ukuran dp bisa secara otomatis membesar sesuai dengan screen density.
+● Jika kita ingin menghitung berapa pixel dari dp, kita bisa gunakan rumus : px = dp * (dpi / 160)
+Note: jangan lagi di harcode layout layer, jadi harus menyesuaikan DPI dan ukuran perangkat yang mau di buat
