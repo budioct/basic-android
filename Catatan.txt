@@ -472,3 +472,12 @@ Pixel Densities
 ● Ukuran dp bisa secara otomatis membesar sesuai dengan screen density.
 ● Jika kita ingin menghitung berapa pixel dari dp, kita bisa gunakan rumus : px = dp * (dpi / 160)
 Note: jangan lagi di harcode layout layer, jadi harus menyesuaikan DPI dan ukuran perangkat yang mau di buat
+
+
+Resource Compatibility
+● Pada materi Localization, kita sudah tahu bahwa resource itu bisa mendukung multi bahasa
+● Di Android, resource juga mendukung multi compatibility
+● Misal, ketika kita membuat gambar ukuran 100px, gambar ini akan terlihat bagus di perangkat
+   dengan density rendah, tapi ketika menggunakan perangkat dengan density tinggi, maka gambar itu ada kemungkinan akan pecah
+● Oleh karena itu, kadang kita perlu mendukung beberapa jenis resource tergantung dari perangkat yang ingin kita dukung
+Note: kita bisa menambahkan Compatibility apapun di resource
