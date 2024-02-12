@@ -523,3 +523,36 @@ Local Test
 ● Namun jangan khawatir, karena jika kita sudah terbiasa menggunakan JUnit 5, harusnya akan lebih
    mudah menggunakan JUnit 4
 
+Instrumentation Test
+● Unit Test hanya bisa digunakan untuk melakukan pengetesan kode program kita
+● Saat kita membuat aplikasi Android, kadang banyak sekali ketergantungan dengan sistem operasi
+   Android nya itu sendiri, oleh karena itu kadang agak sulit untuk membuat unit test ketika kita
+   butuh melakukan pengetesan interaksi dengan UI aplikasi kita
+● Android mendukung Instrumentation Test, atau sederhananya adalah UI Test Automation
+● Dengan menggunakan Instrumentation Test, kita bisa membuat automation test mirip robot, yang
+   mensimulasikan pengguna aplikasi kita
+
+Espresso (UI Test Automation(Robot pengerak))
+● JUnit hanya digunakan untuk library Unit Test, untuk melakukan UI Test, Android menggunakan library bernama Espresso
+● Dengan Espresso, kita bisa membuat UI Test dengan mudah
+● Ada banyak sekali fitur Espresso, dan kita akan belajar secara bertahap di roadmap kelas Android ini
+● https://developer.android.com/training/testing/espresso
+
+Activity Scenario (instrument Test atau end to end test di folder /src/androidTest)
+● Saat kita melakukan instrumentation test, biasanya kita akan melakukan UI Test, dan untuk
+   menampilkan UI, kita biasanya butuh Activity
+● Dalam Instrumentation Test, kita bisa menggunakan ActivityScenario untuk menjalankan sebuah Activity
+● https://developer.android.com/reference/androidx/test/core/app/ActivityScenario
+
+Activity Scenario Rule
+● Menjalankan Activity secara manual menggunakan Activity Scenario tidak direkomendasikan
+   ketika kita membuat Instrumentation Test
+● Kita bisa memanfaatkan ActivityScenarioRule yang bisa di integrasikan dengan JUnit Rule, yang
+   secara otomatis bisa menjalankan Activity ketika unit test mulai dan menghentikan Activity ketika unit test selesai
+● https://developer.android.com/reference/androidx/test/ext/junit/rules/ActivityScenarioRule
+
+Espresso Package
+● Espresso berisikan banyak class yang bisa digunakan untuk mempermudah kita melakukan Instrumentation Test
+● Karena terlalu banyak, jadi kita akan membahasnya sambil kelasnya berjalan, dan sambil kita praktekan
+● Package Espresso ada di androidx.test.espresso
+● https://developer.android.com/reference/androidx/test/espresso/package-summary?hl=en
