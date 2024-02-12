@@ -494,3 +494,25 @@ Note: Break Point adalah posisi nanti ketika programnya berjalan sampai ke baris
 klik baris code, jalankan program nantinya program tersebut akan stack, kita bisa lihat variable dan this(object saat ini)..
 Resume program = melanjutkan break point Debugger
 Evaluate Expression = melihat hasil value komputasi
+
+
+Testing
+● Testing adalah salah satu tahapan dalam pembuatan aplikasi, termasuk di Android
+● Android sudah mendukung testing dengan baik, baik itu unit test sampai end to end test
+
+Jenis Testing di Android
+● Instrumented Test, yaitu test yang di jalankan di perangkat Android, baik itu physical atau
+   emulator. Aplikasi akan di install di perangkat Android, lalu test akan melakukan pengetesan pada
+   aplikasi yang berjalan dengan mengirim perintah-perintah. Instrumented Test bisa dibilang juga Integration Test atau End to End Test.
+● Local Test, yaitu test yang dieksekusi di development machine kita, misal di laptop atau di server.
+   Biasanya local test itu kecil dan cepat, dan biasanya di dalam local test tidak membutuhkan device
+   Android untuk berjalan. Kita bisa bilang juga dengan nama Unit Test
+
+Kenapa Automation Testing Penting?
+● Dengan menjalankan test terhadap aplikasi kita secara konsisten, kita bisa memverifikasi
+   kebenaran aplikasi kita, fungsionalitas aplikasi, sebelum kita merilis aplikasi ke public
+● Sebenarnya kita bisa saja melakukan test secara manual, dengan cara menjalankan aplikasi di Device, lalu mencoba semua fitur.
+● Namun, manual test sulit untuk dikerjakan secara konsisten, rentang kesalahan dan jika butuh
+   cepat, tidak bisa dilakukan secara otomatis juga.
+● Oleh karena itu automation test sangat penting dalam pengembangan aplikasi, terutama aplikasi Android
+
