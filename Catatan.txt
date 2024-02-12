@@ -516,3 +516,10 @@ Kenapa Automation Testing Penting?
    cepat, tidak bisa dilakukan secara otomatis juga.
 ● Oleh karena itu automation test sangat penting dalam pengembangan aplikasi, terutama aplikasi Android
 
+Local Test
+● Android menggunakan JUnit untuk melakukan Unit Test atau Local Test
+● Pada saat dibuatnya video ini, versi JUnit yang digunakan oleh Android masih menggunakan JUnit
+   4, padahal versi terbaru adalah JUnit 5
+● Namun jangan khawatir, karena jika kita sudah terbiasa menggunakan JUnit 5, harusnya akan lebih
+   mudah menggunakan JUnit 4
+
