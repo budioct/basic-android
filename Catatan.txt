@@ -567,3 +567,14 @@ Profiling
 ● Pada kasus ini, fitur Profiling sangatlah berguna
 ● Android mendukung fitur Profiling, dimana kita bisa memonitor aplikasi kita yang berjalan
 ● Kita bisa memonitor penggunaan memory, cpu, dan lain-lain
+
+
+Reset Android Studio (penting di pahami)
+● Kadang ada kalanya kita sering menghadapi error ketika membuka atau menjalankan project
+   Android, entah error di Android SDK nya, atau error di Android Studio nya
+● Pada kasus yang error seperti ini, yang tidak ada hubungannya dengan kode program kita, kita bisa
+   mencoba melakukan reset Android Studio kita
+● Harapannya adalah, kita bisa membuka Android Studio seperti ketika pertama kali kita menginstall Android Studio
+Note: 1. hapus Android Virtual Display (AVD) nya
+      2. ke Setting -> Languange And Framwork -> Android SDK -> UncheckList SDK. setelah di uninstall checklist kembali
+      3. jika android studio nya yang salah File -> Invalidate Caches / Restart
