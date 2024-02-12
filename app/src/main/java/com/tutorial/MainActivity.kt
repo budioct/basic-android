@@ -48,6 +48,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun printHello(name: String){
+
+        Log.i("DEBUG", "Hello Name $name")
+    }
+
     // activity callback, function onCreate() dipanggil ketika activity dibuat
     // (callback function) ketika activity di buat method ini yang akan di eksekusi
     // class R.layout.namaLayoutActivity.xml adalah class yang di generate android untuk di akses method main.kt
@@ -157,6 +162,14 @@ class MainActivity : AppCompatActivity() {
              *                                                                                                       "namaDepan" : "budhi",
              *                                                                                                       "namaBelakang" : "octaviansyah"
              *                                                                                                     }
+             */
+
+            // DEBUGGER
+            val firstName = "budhi"
+            printHello(firstName)
+            /**
+             * result:
+             *
              */
 
             // cek perangkat apah punya feature ini yaitu FingerPrint

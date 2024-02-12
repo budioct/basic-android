@@ -481,3 +481,16 @@ Resource Compatibility
    dengan density rendah, tapi ketika menggunakan perangkat dengan density tinggi, maka gambar itu ada kemungkinan akan pecah
 ● Oleh karena itu, kadang kita perlu mendukung beberapa jenis resource tergantung dari perangkat yang ingin kita dukung
 Note: kita bisa menambahkan Compatibility apapun di resource
+
+
+Debugging (jalankan mode DEBUG)
+● Saat membuat aplikasi, kesalahan sering terjadi
+● Dan kadang, agak sulit untuk mencari kesalahan tersebut, sehingga kita butuh menelusuri alur
+kode program kita satu per satu
+● Untungnya, Android memiliki fitur debugging, dimana kita bisa menghentikan program yang
+sedang berjalan, dan melanjutkan jalannya program secara bertahap sesuai yang kita inginkan
+● Fitur ini sangat tergantung dengan Android Studio
+Note: Break Point adalah posisi nanti ketika programnya berjalan sampai ke baris tersebut maka programnya akan berhenti. kita bisa menulusuri
+klik baris code, jalankan program nantinya program tersebut akan stack, kita bisa lihat variable dan this(object saat ini)..
+Resume program = melanjutkan break point Debugger
+Evaluate Expression = melihat hasil value komputasi
