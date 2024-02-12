@@ -556,3 +556,14 @@ Espresso Package
 ● Karena terlalu banyak, jadi kita akan membahasnya sambil kelasnya berjalan, dan sambil kita praktekan
 ● Package Espresso ada di androidx.test.espresso
 ● https://developer.android.com/reference/androidx/test/espresso/package-summary?hl=en
+
+Profiling
+Profiling
+● Debugging, Unit Test dan Instrumentation Test adalah salah satu cara untuk meminimalisir
+   kesalahan ketika membuat aplikasi
+● Namun kadang-kadang ada masalah yang mungkin tidak terdeteksi oleh debugging, unit test atau
+   bahkan instrumentation test
+● Contoh yang sering terjadi adalah masalah memory leak
+● Pada kasus ini, fitur Profiling sangatlah berguna
+● Android mendukung fitur Profiling, dimana kita bisa memonitor aplikasi kita yang berjalan
+● Kita bisa memonitor penggunaan memory, cpu, dan lain-lain
