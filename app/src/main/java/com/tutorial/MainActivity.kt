@@ -169,7 +169,7 @@ class MainActivity : AppCompatActivity() {
             printHello(firstName)
             /**
              * result:
-             *
+             * 2024-02-12 11:20:39.819  5540-5540  DEBUG                   com.tutorial                         I  Hello Name budhi
              */
 
             // cek perangkat apah punya feature ini yaitu FingerPrint
